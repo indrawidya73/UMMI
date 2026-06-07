@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd 'Laporan Penilaian UMMI1' && npm install && npm run build",
+  "outputDirectory": "Laporan Penilaian UMMI1/dist",
+  "framework": "vite",
+  "nodeVersion": "20.x"
+}
