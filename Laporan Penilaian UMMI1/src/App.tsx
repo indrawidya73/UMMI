@@ -45,9 +45,9 @@ function Login({ onLogin }: { onLogin: (user: User) => void }) {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-amber-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-72 sm:w-96 max-w-full mb-4">
+          <div className="inline-flex items-center justify-center w-48 sm:w-64 max-w-full mb-4">
             <img
-              src="/logos/sukma-logo.svg"
+              src="/logos/logo-sukma.png"
               alt="Logo SUKMA - Sekolah Unggulan Kebonsari Malang - Sekolah Para Juara"
               className="w-full h-auto"
             />
@@ -184,19 +184,28 @@ function Sidebar({
           isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
         }`}
       >
-        <div className="p-5 border-b border-emerald-800 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center flex-shrink-0">
-              <School className="w-5 h-5 text-white" />
+        <div className="p-4 border-b border-emerald-800 flex items-center justify-between">
+          <div className="flex items-center gap-3 flex-1 min-w-0">
+            <img
+              src="/logos/logo-mi-new2.png"
+              alt="Logo MI"
+              className="w-12 h-12 object-contain flex-shrink-0"
+            />
+            <div className="flex-1 min-w-0">
+              <h2 className="font-serif font-bold text-sm leading-tight text-white truncate">MI Islamiyah</h2>
+              <p className="text-emerald-300 text-xs truncate">Metode UMMI</p>
             </div>
-            <div className="overflow-hidden">
-              <h2 className="font-serif font-bold text-sm leading-tight">MI Islamiyah</h2>
-              <p className="text-emerald-300 text-xs">Metode UMMI</p>
-            </div>
+            <img
+              src="/logos/logo-ummi-new2.png"
+              alt="Logo UMMI"
+              className="w-10 h-10 object-cover rounded-full flex-shrink-0"
+            />
           </div>
-          <button onClick={onClose} className="lg:hidden text-white p-1">
-            <X className="w-5 h-5" />
-          </button>
+          {onClose && (
+            <button onClick={onClose} className="lg:hidden text-white p-1 ml-2 flex-shrink-0">
+              <X className="w-5 h-5" />
+            </button>
+          )}
         </div>
 
         <nav className="flex-1 overflow-y-auto p-3 space-y-1">
@@ -1923,6 +1932,7 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
     user.role === 'siswa' ? (user.refId || 0) : (data.siswa[0]?.id || 0)
   );
   const [activeTA, setActiveTA] = useState<number>(data.tahunAjaran.find(ta => ta.aktif)?.id || 1);
+  const [tanggalCetak, setTanggalCetak] = useState<string>('Malang, 02 Juni 2025');
 
   const siswa = data.siswa.find(s => s.id === selectedSiswa);
   const kelas = data.kelas.find(k => k.id === siswa?.kelasId);
@@ -2004,6 +2014,14 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
           <select value={activeTA} onChange={(e) => setActiveTA(Number(e.target.value))} className="px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none text-sm bg-white">
             {data.tahunAjaran.map(t => <option key={t.id} value={t.id}>{t.tahun} - {t.semester}</option>)}
           </select>
+          <input
+            type="text"
+            value={tanggalCetak}
+            onChange={(e) => setTanggalCetak(e.target.value)}
+            placeholder="Tanggal Cetak"
+            className="px-3 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-emerald-500 outline-none text-sm bg-white w-44"
+            title="Edit Tanggal Laporan"
+          />
           {user.role === 'guru' ? (
             <button onClick={() => window.print()} className="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2 rounded-lg font-medium shadow-sm">
               <Printer className="w-4 h-4" /> Cetak / Simpan PDF
@@ -2036,9 +2054,9 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
               <div className="text-center border-b-4 border-double border-gray-800 pb-3 mb-4">
                 <div className="flex items-center justify-between gap-3">
                   <img
-                    src="/logos/ummi-logo.svg"
-                    alt="Logo UMMI"
-                    className="kop-logo w-16 h-16 object-contain flex-shrink-0"
+                    src="/logos/logo-mi-new2.png"
+                    alt="Logo MI Islamiyah"
+                    className="kop-logo w-22 h-22 object-contain flex-shrink-0"
                   />
                   <div className="flex-1">
                     <p className="text-[11px] text-gray-700 font-medium">YAYASAN LEMBAGA PENDIDIKAN ISLAM KEBONSARI</p>
@@ -2047,9 +2065,9 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
                     <p className="text-[10px] text-gray-600">Jl. S. Supriyadi 172 - Telp. (0341) 877190 Kebonsari - Sukun Malang 65149</p>
                   </div>
                   <img
-                    src="/logos/mi-islamiyah-logo.svg"
-                    alt="Logo MI Islamiyah"
-                    className="kop-logo w-16 h-16 object-contain flex-shrink-0"
+                    src="/logos/logo-ummi-new2.png"
+                    alt="Logo UMMI"
+                    className="kop-logo w-16 h-16 object-cover rounded-full flex-shrink-0"
                   />
                 </div>
               </div>
@@ -2102,9 +2120,9 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
                     <th colSpan={3} className="border border-gray-700 px-2 py-1 text-center bg-gray-100">NILAI KETUNTASAN</th>
                   </tr>
                   <tr>
-                    <th className="border border-gray-700 px-2 py-1 text-center w-16 bg-gray-100">Nilai</th>
-                    <th className="border border-gray-700 px-2 py-1 text-center w-16 bg-gray-100">Huruf</th>
-                    <th className="border border-gray-700 px-2 py-1 text-center w-40 bg-gray-100">Keterangan</th>
+                    <th className="border border-gray-700 px-2 py-1 text-center w-14 bg-gray-100">Nilai</th>
+                    <th className="border border-gray-700 px-2 py-1 text-center w-52 bg-gray-100">Huruf</th>
+                    <th className="border border-gray-700 px-2 py-1 text-center w-20 bg-gray-100">Keterangan</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -2117,28 +2135,28 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
                     <td className="border border-gray-700 px-2 py-1 text-center">a.</td>
                     <td className="border border-gray-700 px-3 py-1 pl-6">Hafalan</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{hafalan.nilai}</td>
-                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold">{hafalan.ket}</td>
+                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold whitespace-nowrap">{hafalan.ket}</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{hafalan.huruf}</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-700 px-2 py-1 text-center">b.</td>
                     <td className="border border-gray-700 px-3 py-1 pl-6">Kelancaran</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{kelancaran.nilai}</td>
-                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold">{kelancaran.ket}</td>
+                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold whitespace-nowrap">{kelancaran.ket}</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{kelancaran.huruf}</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-700 px-2 py-1 text-center">c.</td>
                     <td className="border border-gray-700 px-3 py-1 pl-6">Fashoha</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{fashoha.nilai}</td>
-                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold">{fashoha.ket}</td>
+                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold whitespace-nowrap">{fashoha.ket}</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{fashoha.huruf}</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-700 px-2 py-1 text-center">d.</td>
                     <td className="border border-gray-700 px-3 py-1 pl-6">Tartil</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{tartil.nilai}</td>
-                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold">{tartil.ket}</td>
+                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold whitespace-nowrap">{tartil.ket}</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{tartil.huruf}</td>
                   </tr>
                   {/* 2. Tahfidz */}
@@ -2150,21 +2168,21 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
                     <td className="border border-gray-700 px-2 py-1 text-center">a.</td>
                     <td className="border border-gray-700 px-3 py-1 pl-6">Juz 30</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{juz30.nilai}</td>
-                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold">{juz30.ket}</td>
+                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold whitespace-nowrap">{juz30.ket}</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{juz30.huruf}</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-700 px-2 py-1 text-center">b.</td>
                     <td className="border border-gray-700 px-3 py-1 pl-6">Juz 28, 29</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{juz2829.nilai}</td>
-                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold">{juz2829.ket}</td>
+                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold whitespace-nowrap">{juz2829.ket}</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{juz2829.huruf}</td>
                   </tr>
                   <tr>
                     <td className="border border-gray-700 px-2 py-1 text-center">c.</td>
                     <td className="border border-gray-700 px-3 py-1 pl-6">Juz 1</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{juz1.nilai}</td>
-                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold">{juz1.ket}</td>
+                    <td className="border border-gray-700 px-2 py-1 text-center font-semibold whitespace-nowrap">{juz1.ket}</td>
                     <td className="border border-gray-700 px-2 py-1 text-center font-bold">{juz1.huruf}</td>
                   </tr>
                   {/* Jumlah */}
@@ -2219,29 +2237,29 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
               </table>
 
               {/* Tanda Tangan */}
-              <div className="grid grid-cols-2 gap-4 text-sm mt-6">
+              <div className="grid grid-cols-2 gap-4 text-sm mt-4">
                 <div></div>
                 <div className="text-center">
-                  <p>Malang, 02 Juni 2025</p>
+                  <p>{tanggalCetak}</p>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="text-center">
                   <p>Orang tua / Wali</p>
-                  <div className="h-16"></div>
+                  <div className="h-12"></div>
                   <p>(...................................)</p>
                 </div>
                 <div className="text-center">
                   <p>Ustad / Ustadzah</p>
-                  <div className="h-16"></div>
+                  <div className="h-12"></div>
                   <p className="font-bold underline">{guruKelas?.nama || kelas?.waliKelas || '...................................'}</p>
                 </div>
               </div>
 
-              <div className="flex flex-col items-center text-sm mt-6">
+              <div className="flex flex-col items-center text-sm mt-4">
                 <p>Mengetahui,</p>
                 <p>Kepala MI Islamiyah</p>
-                <div className="h-16"></div>
+                <div className="h-12"></div>
                 <p className="font-bold underline">Nur Kholifah, S.Pd.I</p>
                 <p className="text-xs">NIY. 05022003</p>
               </div>
@@ -2415,11 +2433,18 @@ function PenilaianHarianPage({ data, user, onUpdate }: {
           <div className="bg-white rounded-xl shadow-md border border-gray-200 w-full max-w-5xl print:shadow-none print:border-0 print:rounded-none" id="laporan-print">
             <div className="p-4 md:p-6 print:p-0">
               {/* Header kartu */}
-              <div className="flex items-center gap-3 bg-emerald-700 text-white px-3 py-2 rounded-md mb-4">
-                <div className="w-9 h-9 bg-white rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
-                  <img src="/logos/ummi-logo.svg" alt="UMMI" className="w-8 h-8 object-contain" />
-                </div>
-                <h2 className="font-bold tracking-wide text-lg flex-1">KARTU PRESTASI SISWA</h2>
+              <div className="flex items-center gap-3 bg-emerald-700 text-white px-4 py-2.5 rounded-md mb-4">
+                <img
+                  src="/logos/logo-mi-new2.png"
+                  alt="Logo MI"
+                  className="w-12 h-12 object-contain flex-shrink-0"
+                />
+                <h2 className="font-bold tracking-wide text-lg sm:text-xl flex-1 text-center">KARTU PRESTASI SISWA</h2>
+                <img
+                  src="/logos/logo-ummi-new2.png"
+                  alt="Logo UMMI"
+                  className="w-10 h-10 object-cover rounded-full flex-shrink-0"
+                />
               </div>
 
               {/* Identitas */}
