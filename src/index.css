@@ -32,6 +32,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
+/* Responsive tabel Laporan */
+@media (max-width: 640px) {
+  .laporan-table {
+    font-size: 11px;
+  }
+  .laporan-table th,
+  .laporan-table td {
+    padding: 4px 6px;
+  }
+  .laporan-table .header-text {
+    font-size: 10px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .laporan-table {
+    font-size: 12pt;
+  }
+}
 /* Tampilan halaman laporan menyerupai kertas A4 di layar */
 .laporan-page {
   width: 210mm;

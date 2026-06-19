@@ -2116,7 +2116,8 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
               </div>
 
               {/* Tabel Materi UMMI */}
-              <table className="w-full text-sm border-collapse border border-gray-700 mb-4">
+			  <div className="overflow-x-auto">
+              <table className="laporan-table w-full text-sm border-collapse border border-gray-700 mb-4">
                 <thead>
                   <tr>
                     <th rowSpan={2} className="border border-gray-700 px-2 py-1 text-center w-10 bg-gray-100">No.</th>
@@ -2199,7 +2200,8 @@ function Laporan({ data, user }: { data: AppData; user: User }) {
               </table>
 
               {/* Ketidakhadiran & Perilaku */}
-              <table className="w-full text-sm border-collapse border border-gray-700 mb-6">
+			  <div className="overflow-x-auto">
+              <table className="laporan-table w-full text-sm border-collapse border border-gray-700 mb-6">
                 <thead>
                   <tr className="bg-gray-100">
                     <th className="border border-gray-700 px-2 py-1 text-center w-8">No.</th>
