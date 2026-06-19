@@ -130,6 +130,19 @@ export interface Penilaian {
   };
 }
 
+// ===== Kelompok UMMI =====
+export interface KelompokUMMI {
+  id: string;
+  nama: string;
+  jenjang_id: string;
+  guru_pengampu_id: string;
+  tingkat_sekolah: number;
+  kelas_sumber: string[];
+  tahun_ajaran: string;
+  kapasitas: number;
+  created_at: string;
+}
+
 export interface AppData {
   guru: Guru[];
   siswa: Siswa[];
@@ -140,6 +153,7 @@ export interface AppData {
   penilaian: Penilaian[];
   users: User[];
   penilaianHarian?: PenilaianHarian[];
+  kelompokUMMI?: KelompokUMMI[];  // ← TAMBAHIN INI
 }
 
 // ===== Kartu Prestasi Siswa (Penilaian Harian Guru UMMI) =====

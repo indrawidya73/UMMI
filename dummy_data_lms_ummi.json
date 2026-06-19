@@ -1,0 +1,805 @@
+{
+  "guru": [
+    {
+      "id": 1,
+      "nip": "G001",
+      "nama": "Ust. Ahmad Fauzi",
+      "jenisKelamin": "L",
+      "mataPelajaran": "Jilid 1",
+      "kelas": "1A",
+      "status": "Aktif"
+    },
+    {
+      "id": 2,
+      "nip": "G002",
+      "nama": "Ustz. Budi Santoso",
+      "jenisKelamin": "L",
+      "mataPelajaran": "Jilid 2",
+      "kelas": "2A",
+      "status": "Aktif"
+    },
+    {
+      "id": 3,
+      "nip": "G003",
+      "nama": "Ust. Choirul Anam",
+      "jenisKelamin": "L",
+      "mataPelajaran": "Jilid 3",
+      "kelas": "3A",
+      "status": "Aktif"
+    },
+    {
+      "id": 4,
+      "nip": "G004",
+      "nama": "Ustz. Dewi Kusuma",
+      "jenisKelamin": "P",
+      "mataPelajaran": "Jilid 4",
+      "kelas": "4A",
+      "status": "Aktif"
+    },
+    {
+      "id": 5,
+      "nip": "G005",
+      "nama": "Ust. Eko Prasetyo",
+      "jenisKelamin": "L",
+      "mataPelajaran": "Jilid 5",
+      "kelas": "5A",
+      "status": "Aktif"
+    },
+    {
+      "id": 6,
+      "nip": "G006",
+      "nama": "Ustz. Fitriani",
+      "jenisKelamin": "P",
+      "mataPelajaran": "Jilid 6",
+      "kelas": "6A",
+      "status": "Aktif"
+    }
+  ],
+  "kelas": [
+    {
+      "id": 1,
+      "nama": "1A",
+      "tingkat": 1,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 2,
+      "nama": "1B",
+      "tingkat": 1,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 3,
+      "nama": "2A",
+      "tingkat": 2,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 4,
+      "nama": "2B",
+      "tingkat": 2,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 5,
+      "nama": "3A",
+      "tingkat": 3,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 6,
+      "nama": "3B",
+      "tingkat": 3,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 7,
+      "nama": "4A",
+      "tingkat": 4,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 8,
+      "nama": "4B",
+      "tingkat": 4,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 9,
+      "nama": "5A",
+      "tingkat": 5,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 10,
+      "nama": "5B",
+      "tingkat": 5,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 11,
+      "nama": "6A",
+      "tingkat": 6,
+      "tahunAjaran": "2026/2027"
+    },
+    {
+      "id": 12,
+      "nama": "6B",
+      "tingkat": 6,
+      "tahunAjaran": "2026/2027"
+    }
+  ],
+  "siswa": [
+    {
+      "id": 1,
+      "nis": "2026001",
+      "nama": "Kiki Putra",
+      "jenisKelamin": "L",
+      "kelasId": 1,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 2,
+      "nis": "2026002",
+      "nama": "Dewi Saputra",
+      "jenisKelamin": "P",
+      "kelasId": 2,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 3,
+      "nis": "2026003",
+      "nama": "Kiki Wijaya",
+      "jenisKelamin": "L",
+      "kelasId": 1,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 4,
+      "nis": "2026004",
+      "nama": "Aisyah Putra",
+      "jenisKelamin": "P",
+      "kelasId": 2,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 5,
+      "nis": "2026005",
+      "nama": "Eko Wulandari",
+      "jenisKelamin": "L",
+      "kelasId": 1,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 6,
+      "nis": "2026006",
+      "nama": "Indah Nugroho",
+      "jenisKelamin": "P",
+      "kelasId": 2,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 7,
+      "nis": "2026007",
+      "nama": "Yusuf Lestari",
+      "jenisKelamin": "L",
+      "kelasId": 1,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 8,
+      "nis": "2026008",
+      "nama": "Maya Kusuma",
+      "jenisKelamin": "P",
+      "kelasId": 2,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 9,
+      "nis": "2026009",
+      "nama": "Yusuf Santoso",
+      "jenisKelamin": "L",
+      "kelasId": 1,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 10,
+      "nis": "2026010",
+      "nama": "Zahra Wijaya",
+      "jenisKelamin": "P",
+      "kelasId": 2,
+      "jilid": "Jilid 1",
+      "status": "Aktif"
+    },
+    {
+      "id": 11,
+      "nis": "2026011",
+      "nama": "Lutfi Santoso",
+      "jenisKelamin": "L",
+      "kelasId": 3,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 12,
+      "nis": "2026012",
+      "nama": "Dewi Sari",
+      "jenisKelamin": "P",
+      "kelasId": 4,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 13,
+      "nis": "2026013",
+      "nama": "Vino Hidayat",
+      "jenisKelamin": "L",
+      "kelasId": 3,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 14,
+      "nis": "2026014",
+      "nama": "Yuni Wijaya",
+      "jenisKelamin": "P",
+      "kelasId": 4,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 15,
+      "nis": "2026015",
+      "nama": "Kiki Putra",
+      "jenisKelamin": "L",
+      "kelasId": 3,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 16,
+      "nis": "2026016",
+      "nama": "Putri Kusuma",
+      "jenisKelamin": "P",
+      "kelasId": 4,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 17,
+      "nis": "2026017",
+      "nama": "Yusuf Santoso",
+      "jenisKelamin": "L",
+      "kelasId": 3,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 18,
+      "nis": "2026018",
+      "nama": "Wulan Saputra",
+      "jenisKelamin": "P",
+      "kelasId": 4,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 19,
+      "nis": "2026019",
+      "nama": "Yusuf Anggraini",
+      "jenisKelamin": "L",
+      "kelasId": 3,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 20,
+      "nis": "2026020",
+      "nama": "Lestari Setiawan",
+      "jenisKelamin": "P",
+      "kelasId": 4,
+      "jilid": "Jilid 2",
+      "status": "Aktif"
+    },
+    {
+      "id": 21,
+      "nis": "2026021",
+      "nama": "Nanda Dewi",
+      "jenisKelamin": "L",
+      "kelasId": 5,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 22,
+      "nis": "2026022",
+      "nama": "Vina Pratama",
+      "jenisKelamin": "P",
+      "kelasId": 6,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 23,
+      "nis": "2026023",
+      "nama": "Kiki Sari",
+      "jenisKelamin": "L",
+      "kelasId": 5,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 24,
+      "nis": "2026024",
+      "nama": "Sari Santoso",
+      "jenisKelamin": "P",
+      "kelasId": 6,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 25,
+      "nis": "2026025",
+      "nama": "Joko Dewi",
+      "jenisKelamin": "L",
+      "kelasId": 5,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 26,
+      "nis": "2026026",
+      "nama": "Jelita Dewi",
+      "jenisKelamin": "P",
+      "kelasId": 6,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 27,
+      "nis": "2026027",
+      "nama": "Candra Saputra",
+      "jenisKelamin": "L",
+      "kelasId": 5,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 28,
+      "nis": "2026028",
+      "nama": "Putri Hidayat",
+      "jenisKelamin": "P",
+      "kelasId": 6,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 29,
+      "nis": "2026029",
+      "nama": "Joko Anggraini",
+      "jenisKelamin": "L",
+      "kelasId": 5,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 30,
+      "nis": "2026030",
+      "nama": "Kirana Saputra",
+      "jenisKelamin": "P",
+      "kelasId": 6,
+      "jilid": "Jilid 3",
+      "status": "Aktif"
+    },
+    {
+      "id": 31,
+      "nis": "2026031",
+      "nama": "Eko Wulandari",
+      "jenisKelamin": "L",
+      "kelasId": 7,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 32,
+      "nis": "2026032",
+      "nama": "Aisyah Lestari",
+      "jenisKelamin": "P",
+      "kelasId": 8,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 33,
+      "nis": "2026033",
+      "nama": "Qori Wulandari",
+      "jenisKelamin": "L",
+      "kelasId": 7,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 34,
+      "nis": "2026034",
+      "nama": "Rina Nugroho",
+      "jenisKelamin": "P",
+      "kelasId": 8,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 35,
+      "nis": "2026035",
+      "nama": "Taufik Dewi",
+      "jenisKelamin": "L",
+      "kelasId": 7,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 36,
+      "nis": "2026036",
+      "nama": "Wulan Anggraini",
+      "jenisKelamin": "P",
+      "kelasId": 8,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 37,
+      "nis": "2026037",
+      "nama": "Lutfi Anggraini",
+      "jenisKelamin": "L",
+      "kelasId": 7,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 38,
+      "nis": "2026038",
+      "nama": "Xena Putra",
+      "jenisKelamin": "P",
+      "kelasId": 8,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 39,
+      "nis": "2026039",
+      "nama": "Rian Nugroho",
+      "jenisKelamin": "L",
+      "kelasId": 7,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 40,
+      "nis": "2026040",
+      "nama": "Aisyah Sari",
+      "jenisKelamin": "P",
+      "kelasId": 8,
+      "jilid": "Jilid 4",
+      "status": "Aktif"
+    },
+    {
+      "id": 41,
+      "nis": "2026041",
+      "nama": "Oki Lestari",
+      "jenisKelamin": "L",
+      "kelasId": 9,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 42,
+      "nis": "2026042",
+      "nama": "Jelita Ramadhan",
+      "jenisKelamin": "P",
+      "kelasId": 10,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 43,
+      "nis": "2026043",
+      "nama": "Zaki Santoso",
+      "jenisKelamin": "L",
+      "kelasId": 9,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 44,
+      "nis": "2026044",
+      "nama": "Qonita Wijaya",
+      "jenisKelamin": "P",
+      "kelasId": 10,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 45,
+      "nis": "2026045",
+      "nama": "Ahmad Lestari",
+      "jenisKelamin": "L",
+      "kelasId": 9,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 46,
+      "nis": "2026046",
+      "nama": "Nadia Santoso",
+      "jenisKelamin": "P",
+      "kelasId": 10,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 47,
+      "nis": "2026047",
+      "nama": "Kiki Hidayat",
+      "jenisKelamin": "L",
+      "kelasId": 9,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 48,
+      "nis": "2026048",
+      "nama": "Kirana Anggraini",
+      "jenisKelamin": "P",
+      "kelasId": 10,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 49,
+      "nis": "2026049",
+      "nama": "Ahmad Dewi",
+      "jenisKelamin": "L",
+      "kelasId": 9,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 50,
+      "nis": "2026050",
+      "nama": "Qonita Ramadhan",
+      "jenisKelamin": "P",
+      "kelasId": 10,
+      "jilid": "Jilid 5",
+      "status": "Aktif"
+    },
+    {
+      "id": 51,
+      "nis": "2026051",
+      "nama": "Irfan Pratama",
+      "jenisKelamin": "L",
+      "kelasId": 11,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 52,
+      "nis": "2026052",
+      "nama": "Indah Setiawan",
+      "jenisKelamin": "P",
+      "kelasId": 12,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 53,
+      "nis": "2026053",
+      "nama": "Budi Sari",
+      "jenisKelamin": "L",
+      "kelasId": 11,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 54,
+      "nis": "2026054",
+      "nama": "Qonita Saputra",
+      "jenisKelamin": "P",
+      "kelasId": 12,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 55,
+      "nis": "2026055",
+      "nama": "Ahmad Lestari",
+      "jenisKelamin": "L",
+      "kelasId": 11,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 56,
+      "nis": "2026056",
+      "nama": "Qonita Pratama",
+      "jenisKelamin": "P",
+      "kelasId": 12,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 57,
+      "nis": "2026057",
+      "nama": "Kiki Pratama",
+      "jenisKelamin": "L",
+      "kelasId": 11,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 58,
+      "nis": "2026058",
+      "nama": "Putri Anggraini",
+      "jenisKelamin": "P",
+      "kelasId": 12,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 59,
+      "nis": "2026059",
+      "nama": "Pandu Hidayat",
+      "jenisKelamin": "L",
+      "kelasId": 11,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    },
+    {
+      "id": 60,
+      "nis": "2026060",
+      "nama": "Citra Pratama",
+      "jenisKelamin": "P",
+      "kelasId": 12,
+      "jilid": "Jilid 6",
+      "status": "Aktif"
+    }
+  ],
+  "kelompok_ummi": [
+    {
+      "id": "K1",
+      "nama": "Jilid 1 - Ust. Ahmad",
+      "jenjang_id": "jilid-1",
+      "guru_pengampu_id": "1",
+      "tingkat_sekolah": 1,
+      "kelas_sumber": [
+        "1A",
+        "1B"
+      ],
+      "tahun_ajaran": "2026/2027",
+      "kapasitas": 20
+    },
+    {
+      "id": "K2",
+      "nama": "Jilid 2 - Ustz. Budi",
+      "jenjang_id": "jilid-2",
+      "guru_pengampu_id": "2",
+      "tingkat_sekolah": 2,
+      "kelas_sumber": [
+        "2A",
+        "2B"
+      ],
+      "tahun_ajaran": "2026/2027",
+      "kapasitas": 20
+    },
+    {
+      "id": "K3",
+      "nama": "Jilid 3 - Ust. Choirul",
+      "jenjang_id": "jilid-3",
+      "guru_pengampu_id": "3",
+      "tingkat_sekolah": 3,
+      "kelas_sumber": [
+        "3A",
+        "3B"
+      ],
+      "tahun_ajaran": "2026/2027",
+      "kapasitas": 20
+    },
+    {
+      "id": "K4",
+      "nama": "Jilid 4 - Ustz. Dewi",
+      "jenjang_id": "jilid-4",
+      "guru_pengampu_id": "4",
+      "tingkat_sekolah": 4,
+      "kelas_sumber": [
+        "4A",
+        "4B"
+      ],
+      "tahun_ajaran": "2026/2027",
+      "kapasitas": 20
+    },
+    {
+      "id": "K5",
+      "nama": "Jilid 5 - Ust. Eko",
+      "jenjang_id": "jilid-5",
+      "guru_pengampu_id": "5",
+      "tingkat_sekolah": 5,
+      "kelas_sumber": [
+        "5A",
+        "5B"
+      ],
+      "tahun_ajaran": "2026/2027",
+      "kapasitas": 20
+    },
+    {
+      "id": "K6",
+      "nama": "Jilid 6 - Ustz. Fitriani",
+      "jenjang_id": "jilid-6",
+      "guru_pengampu_id": "6",
+      "tingkat_sekolah": 6,
+      "kelas_sumber": [
+        "6A",
+        "6B"
+      ],
+      "tahun_ajaran": "2026/2027",
+      "kapasitas": 20
+    }
+  ],
+  "users": [
+    {
+      "username": "guru1",
+      "password": "guru123",
+      "role": "guru",
+      "name": "Ust. Ahmad Fauzi",
+      "refId": "1"
+    },
+    {
+      "username": "guru2",
+      "password": "guru123",
+      "role": "guru",
+      "name": "Ustz. Budi Santoso",
+      "refId": "2"
+    },
+    {
+      "username": "guru3",
+      "password": "guru123",
+      "role": "guru",
+      "name": "Ust. Choirul Anam",
+      "refId": "3"
+    },
+    {
+      "username": "guru4",
+      "password": "guru123",
+      "role": "guru",
+      "name": "Ustz. Dewi Kusuma",
+      "refId": "4"
+    },
+    {
+      "username": "guru5",
+      "password": "guru123",
+      "role": "guru",
+      "name": "Ust. Eko Prasetyo",
+      "refId": "5"
+    },
+    {
+      "username": "guru6",
+      "password": "guru123",
+      "role": "guru",
+      "name": "Ustz. Fitriani",
+      "refId": "6"
+    }
+  ],
+  "tahunAjaran": [
+    {
+      "id": 1,
+      "nama": "2026/2027",
+      "aktif": true
+    }
+  ]
+}

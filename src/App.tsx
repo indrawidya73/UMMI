@@ -11,11 +11,13 @@ import type {
   JilidType, StatusAbsen, PenilaianHarian
 } from './types';
 import { JILID_OPTIONS } from './types';
+import DashboardGuruUMMI from "./components/DashboardGuruUMMI";
+import AdminKelompokUMMI from "./components/admin/AdminKelompokUMMI";
 import { loadData, saveData, getNextId } from './store';
 import { exportToExcel, exportToCSV, exportToPDF, buildHTMLTable } from './utils/exportUtils';
 
 // ==================== AUTH CONTEXT ====================
-type Page = 'dashboard' | 'admin-users' | 'admin-import' | 'guru' | 'pengampu' | 'siswa' | 'kelas' | 'tahun-ajaran' | 'absensi' | 'penilaian' | 'penilaian-harian' | 'laporan';
+type Page = 'dashboard' | 'admin-users' | 'admin-import' | 'guru' | 'pengampu' | 'siswa' | 'kelas' | 'tahun-ajaran' | 'absensi' | 'penilaian' | 'penilaian-harian' | 'laporan' | 'dashboard-ummi';
 
 function Login({ onLogin }: { onLogin: (user: User) => void }) {
   const [username, setUsername] = useState('');
@@ -146,6 +148,7 @@ function Sidebar({
 }) {
   const guruMenu: Array<{ page: Page; label: string; icon: any }> = [
     { page: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+	{ page: "dashboard-ummi" as Page, label: "Dashboard UMMI", icon: TrendingUp },
     { page: 'guru', label: 'Data Guru', icon: UserCog },
     { page: 'pengampu', label: 'Pengampu UMMI', icon: BookOpen },
     { page: 'siswa', label: 'Data Siswa', icon: GraduationCap },
@@ -165,6 +168,7 @@ function Sidebar({
 
   const adminMenu: Array<{ page: Page; label: string; icon: any }> = [
     { page: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+	{ page: "admin-kelompok-ummi" as Page, label: "Kelompok UMMI", icon: BookOpen },
     { page: 'admin-users', label: 'Manajemen User', icon: UserCog },
     { page: 'admin-import', label: 'Import Massal', icon: FileText },
   ];
@@ -3487,6 +3491,8 @@ export default function App() {
 
   const pageTitle: Record<Page, string> = {
     'dashboard': 'Dashboard',
+	'admin-kelompok-ummi': 'Kelompok UMMI',
+	'dashboard-ummi': 'Dashboard UMMI',
     'admin-users': 'Manajemen User',
     'admin-import': 'Import Massal',
     'guru': 'Data Guru',
@@ -3536,6 +3542,8 @@ export default function App() {
           {currentPage === 'penilaian' && user.role === 'guru' && <Penilaian data={data} onUpdate={handleUpdate} />}
           {currentPage === 'penilaian-harian' && <PenilaianHarianPage data={data} user={user} onUpdate={handleUpdate} />}
           {currentPage === 'laporan' && <Laporan data={data} user={user} />}
+		  {currentPage === 'admin-kelompok-ummi' && user.role === 'admin' && <AdminKelompokUMMI data={data} onUpdate={handleUpdate} />}
+		  {currentPage === 'dashboard-ummi' && user.role === 'guru' && <DashboardGuruUMMI data={data} onUpdate={handleUpdate} />}
         </main>
       </div>
     </div>
