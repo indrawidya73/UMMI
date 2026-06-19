@@ -1,0 +1,21 @@
+{
+  "name": "LMS UMMI",
+  "short_name": "UMMI",
+  "description": "Learning Management System Metode UMMI",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#064e3b",
+  "icons": [
+    {
+      "src": "/logos/ummi-logo.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logos/ummi-logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
